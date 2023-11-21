@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web App Title</title>
+</head>
+<body style="background-image: url('C:\Users\Administrator\Downloads\HeathCare-project-main\cancer_detection_web_page\templates\mainpage.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center; background-attachment: fixed; font-family: Arial, sans-serif; margin: 0;">
+
+    <div style="text-align: center; padding: 50px; color: Tomato;">
+        <h1><center> Welcome to Health Prediction Web App </center></h1>
+
+        <div style="margin-top: 20px;">
+            <a href="{{ url_for('cancer') }}" style="display: inline-block; margin: 10px; padding: 15px 30px; text-decoration: none; color: #fff; background-color: #007BFF; border-radius: 5px; font-size: 16px;">Cancer Detection</a>
+            <a href="{{ url_for('diabetes') }}" style="display: inline-block; margin: 10px; padding: 15px 30px; text-decoration: none; color: #fff; background-color: #007BFF; border-radius: 5px; font-size: 16px;">Diabetes Prediction</a>
+            <a href="{{ url_for('heart') }}" style="display: inline-block; margin: 10px; padding: 15px 30px; text-decoration: none; color: #fff; background-color: #007BFF; border-radius: 5px; font-size: 16px;">Heart Disease Prediction</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Web App</title>
+</head>
+<body>
+    <h1>Heart Disease Prediction Web App</h1>
+    <form action="{{ url_for('heart_predict') }}" method="post">
+        <label for="Age">Age:</label>
+        <input type="text" name="Age" required>
+        <br>
+        
+        <label for="Sex">Sex:(0 - Female, 1 - Male)</label>
+    	<input type="text" name="Sex" required>
+    	<br>
+    	
+        <label for="ChestPainType">Chest Pain Type:(0 - ASY, 1 - NAP, 2 - ATA, 3 - TA)</label>
+    	<input type="text" name="ChestPainType" required>
+    	<br>
+    	
+        <label for="RestingBP">Resting Blood Pressure:</label>
+        <input type="text" name="RestingBP" required>
+        <br>
+        
+        <label for="Cholesterol">Cholesterol:</label>
+        <input type="text" name="Cholesterol" required>
+        <br>
+        
+        <label for="FastingBS">Fasting Blood Sugar (0: <=120, 1: >120):</label>
+        <input type="text" name="FastingBS" required>
+        <br>
+        
+        <label for="RestingECG">Resting ECG:(0 - Normal, 1 - ST, 2 - LVH)</label>
+    	<input type="text" name="RestingECG" required>
+    	<br>
+    	
+        <label for="MaxHR">Max Heart Rate:</label>
+        <input type="text" name="MaxHR" required>
+        <br>
+        
+        <label for="ExerciseAngina">Exercise Angina: (0 - No Angina, 1 - Angina)</label>
+        <input type="text" name="ExerciseAngina" required>
+    	<br>
+    	
+
+        <label for="Oldpeak">Oldpeak:</label>
+        <input type="text" name="Oldpeak" required>
+        <br>
+       
+        <label for="ST_Slope">ST Slope:(0 - Flat, 1 -Up, 2 - Down)</label>
+    	<input type="text" name="ST_Slope" required>
+    	<br>
+
+        <button type="submit">Predict Heart Disease</button>
+    </form>
+    {% if result %}
+    <h2>Result:</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
